@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- how to add absolute paths for css files -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    {{ include('includes/navbar.html.twig') }}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
